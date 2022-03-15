@@ -59,3 +59,26 @@ class SecondScreen extends StatelessWidget {
     );
   }
 }
+
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pull Refresh'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          // Within the `FirstScreen` widget
+          onPressed: () {
+            // Navigate to the second screen using a named route.
+            Navigator.pushNamed(context, '/pull');
+          },
+          child: const Text('Pull To Refresh'),
+        ),
+      ),
+    );
+  }
+}

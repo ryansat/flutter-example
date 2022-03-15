@@ -39,6 +39,13 @@ class Home extends StatelessWidget {
               },
               child: const Text('Card'),
             ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pull');
+              },
+              child: const Text('Pull To Refresh'),
+            ),
           ],
         ),
       ),
