@@ -46,6 +46,13 @@ class Home extends StatelessWidget {
               },
               child: const Text('Pull To Refresh'),
             ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/print');
+              },
+              child: const Text('Print Demo'),
+            ),
           ],
         ),
       ),
